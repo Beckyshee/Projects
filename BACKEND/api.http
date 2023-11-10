@@ -1,0 +1,100 @@
+//create user
+###
+POST http://localhost:5000/users/create
+Content-Type: application/json
+
+{
+    "firstName":"alex",
+    "lastName":"waihenya",
+    "email":"lxwaihenya@gmail.com",
+    "password":"12345678"
+}
+//LOGIN TO ACCOUNT
+###
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "email":"kakinyidk@gmail.com",
+    "password":"12345678"  
+}
+
+//CHECKUSER
+###
+GET http://localhost:5000/projects/check
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImZpcnN0TmFtZSI6ImRhbiIsImxhc3ROYW1lIjoia2l0aGVrYSIsImVtYWlsIjoia2FraW55aWRrQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JEVlRk9aWG9XOVhHL1FOQkpEYTd3VHV1emI4YzhxNDVoR0Q3Y3o1MnJybkdKSjUwQVpWLlRtIiwicm9sZSI6IjEiLCJpYXQiOjE2NjA2NDM4NDEsImV4cCI6MTY2MDY0NDE0MX0.XdeneDrp_wD7FfiiBebM6Cm-3v5-2C8pplcQ4DcOAfU
+
+
+###
+//CREATING A PROJECT
+POST http://localhost:5000/projects/create
+Content-Type: application/json
+
+{
+    "projectName":"abdgh",
+    "description":"hacking",
+    "endDate":"12/3/2022",
+    "userId":"1012"
+}
+
+
+//DELETING A PROJECT/
+###
+POST http://localhost:5000/projects/delete
+Content-Type: application/json
+
+{
+    "projectId":"2"
+}
+
+
+
+// SET PROJECT AS COMPLETED/
+###
+POST http://localhost:5000/users/setDone
+Content-Type: application/json
+
+{
+    "projectId":"2"
+}
+
+
+//ASSIGNING PROJECTS TO USERS
+###
+POST http://localhost:5000/projects/assignProject
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImZpcnN0TmFtZSI6ImRhbiIsImxhc3ROYW1lIjoia2l0aGVrYSIsImVtYWlsIjoia2FraW55aWRrQGdtYWlsLmNvbSIsInJvbGUiOiIxIiwiaWF0IjoxNjYwNTU3NzAyLCJleHAiOjE2NjA1NTgwMDJ9.gqnRSeT7Qk-VpAfDJ96DLhjnXkUcGxbABmXR3B49zuU
+
+{
+    "projectId":"4",
+    "userId":"1012"
+}
+
+# CHECKING PENDING PROJECTS
+###
+POST http://localhost:5000/projects/pendingProjects
+Content-Type: application/json
+
+
+//CHECKING COMPLETE PROJECTS
+###
+POST http://localhost:5000/projects/completeProjects
+Content-Type: application/json
+
+
+//CHECK IF ASSIGNED PROJECT
+###
+POST http://localhost:5000/users/assigned
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImZpcnN0TmFtZSI6ImFsZXgiLCJsYXN0TmFtZSI6IndhaWhlbnlhIiwiZW1haWwiOiJseHdhaWhlbnlhQGdtYWlsLmNvbSIsInJvbGUiOiIwIiwiaWF0IjoxNjYwNTEwNjk5LCJleHAiOjE2NjA1MTA5OTl9.wMgODeHNpaNX0IYHmtxQR-pnp-ZaVyJndgh97BtTaus
+
+//ALL USERS
+###
+POST http://localhost:5000/users/allusers
+Content-Type: application/json
+
+//IDLE USERS
+###
+POST http://localhost:5000/users/idleusers
+Content-Type: application/json

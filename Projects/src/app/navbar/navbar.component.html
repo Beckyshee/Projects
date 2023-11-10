@@ -1,0 +1,10 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar">
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!loggedIn"><a routerLink="/register">Register</a></li>
+    <li *ngIf="loggedIn"><a (click)="Logout()">Logout</a></li>
+  </ul>
+</nav>
